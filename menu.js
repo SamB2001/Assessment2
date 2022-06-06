@@ -31,7 +31,14 @@
 */
 
 //CODE HERE
-
+let pizza = {
+    name: 'Memphis BBQ Chicken',
+    price: 16.95,
+    category: 'Entree',
+    popularity: 17,
+    rating: 8.4,
+    tags: ['Specialty','Chicken','Gluten-Free']
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,7 +50,8 @@
 */
 
 //CODE HERE
-
+let pizzaPop = pizza.popularity
+// console.log(pizzaPop)
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +61,8 @@
 */
 
 //CODE HERE
-
+let pizzaTag = pizza.tags[1]
+// console.log(pizzaTag)
 
 /*
     Third, destructure the price off of the
@@ -63,7 +72,8 @@
 */
 
 //CODE HERE
-
+let {price: OverPriced} = pizza
+// console.log(OverPriced)
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +83,8 @@
 */
 
 //CODE HERE
-
+let {category: Categories} = pizza
+// console.log(Categories)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,7 +99,47 @@
 */
 
 //CODE HERE
-
+let foodArr = [{
+    name: 'Memphis BBQ Chicken',
+    price: 16.95,
+    category: 'Entree',
+    popularity: 17,
+    rating: 8.4,
+    tags: ['Specialty','Chicken','Gluten-Free'] 
+},
+{
+    name: 'Chicken Bacon Ranch',
+    price: 18.50,
+    category: 'Entree',
+    popularity: 19,
+    rating: 9,
+    tags: ['Specialty','Bacon','Chicken']
+},
+{
+    name: 'Breadsticks',
+    price: 9.50,
+    category: 'Side',
+    popularity: 14,
+    rating: 6.7,
+    tags: ['Appetizer','Cheesy Option','Gluten-Free Option']
+},
+{
+    name: 'Meatlovers',
+    price: 20,
+    category: 'Entree',
+    popularity: 20,
+    rating: 9.5,
+    tags: ['Specialty','Calorie Dense','Carnivore'] 
+},
+{
+    name: 'Classic Pepperoni',
+    price: 14.50,
+    category: 'Entree',
+    popularity: 20,
+    rating: 9.8,
+    tags: ['Classic','Kids Size Option','Gluten-Free Option']
+}
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -105,8 +156,10 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
+const filteredFood = foodArr.filter(function(obj, callback){
+    return foodArr.tags('Specialty')
+})
+console.log(filteredFood)
 
 
 //////////////////PROBLEM 5////////////////////

@@ -35,7 +35,7 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce(/* CALLBACK HERE */)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -79,7 +79,10 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
-
+property 1: customer name. Data type would be a string because its a simple text response from the customer
+property 2: customers cart content. Data type would be an array because theres multiple items in a cart
+property 3: customers total. Data type would be a number because the total is a number
+property 4: customers card info. Data type would be an array because its multiple numbers 
 */
 
 /*
@@ -88,3 +91,10 @@ const cart = [
 */
 
 //CODE HERE
+const customer = {
+    name: 'Billy Jon',
+    cartContents: ['pizza','pasta','salad'],
+    total: 25.97,
+    cardInfo: ['1111 2222 3333 4444', '07/23', '123']
+
+}
