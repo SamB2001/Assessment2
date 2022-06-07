@@ -34,11 +34,13 @@ const cart = [
 ]
 
 //CODE HERE
+function callbackFunction(prevValue, currentValue) {
+    return prevValue + currentValue.price
+}
 
-const summedPrice = cart.reduce((callback, price1) => {
-    return callback(price1.price)
-})
-console.log(summedPrice)
+
+const summedPrice = cart.reduce(callbackFunction, 0)
+// console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -56,7 +58,11 @@ console.log(summedPrice)
 */
 
 //CODE HERE
-
+function calcFinalPrice(cartTotal, couponValue,tax) {
+    let total = cartTotal + (tax * cartTotal) - couponValue
+    return total
+}
+console.log(calcFinalPrice(5, 1, .05))
 
 
 //////////////////PROBLEM 3////////////////////
