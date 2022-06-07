@@ -103,7 +103,7 @@ let foodArr = [{
     name: 'Memphis BBQ Chicken',
     price: 16.95,
     category: 'Entree',
-    popularity: 17,
+    popularity: 7,
     rating: 8.4,
     tags: ['Specialty','Chicken','Gluten-Free'] 
 },
@@ -111,7 +111,7 @@ let foodArr = [{
     name: 'Chicken Bacon Ranch',
     price: 18.50,
     category: 'Entree',
-    popularity: 19,
+    popularity: 6,
     rating: 9,
     tags: ['Specialty','Bacon','Chicken']
 },
@@ -119,7 +119,7 @@ let foodArr = [{
     name: 'Breadsticks',
     price: 9.50,
     category: 'Side',
-    popularity: 14,
+    popularity: 10,
     rating: 6.7,
     tags: ['Appetizer','Cheesy Option','Gluten-Free Option']
 },
@@ -127,7 +127,7 @@ let foodArr = [{
     name: 'Meatlovers',
     price: 20,
     category: 'Entree',
-    popularity: 20,
+    popularity: 6,
     rating: 9.5,
     tags: ['Specialty','Calorie Dense','Carnivore'] 
 },
@@ -135,7 +135,7 @@ let foodArr = [{
     name: 'Classic Pepperoni',
     price: 14.50,
     category: 'Entree',
-    popularity: 20,
+    popularity: 5,
     rating: 9.8,
     tags: ['Classic','Kids Size Option','Gluten-Free Option']
 }
@@ -156,8 +156,8 @@ let foodArr = [{
 
 //CODE HERE
 
-const filteredFood = foodArr.filter(function(obj, callback){
-    return foodArr.tags('Specialty')
+const filteredFood = foodArr.filter((foodItem)=> {
+    return foodItem.tags.includes('Carnivore')
 })
 console.log(filteredFood)
 
@@ -202,7 +202,16 @@ console.log(filteredFood)
 */
 
 //CODE HERE
-
+const filterByProperty = function(property, number, type) {
+    const filteredArr = foodArr.filter((element) => {
+        if (type === 'above') {
+            return element[property] > number
+        }else if (type === 'below') {
+            return element[property] < number
+        }
+    })
+    return filteredArr
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -212,3 +221,4 @@ console.log(filteredFood)
 */
 
 //CODE HERE
+console.log(filterByProperty('popularity', 6, 'above'))

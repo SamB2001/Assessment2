@@ -142,6 +142,5 @@ let moreMoney = deals2.replace('5', '0')
 */
 
 //CODE HERE
-let newMonth1 = deals2.replace('March', 'April')
-let newMonth2 = newMonth1.trim()
-console.log(newMonth2)
+deals[1].desc = deals[1].desc.replace('March','April').trim()
+console.log(deals)
